@@ -6,29 +6,39 @@ namespace Agent1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number:");
-            string input = Console.ReadLine();
-
-            if (int.TryParse(input, out int n))
+            while (true)
             {
-                if (n <= 0)
+                Console.WriteLine("Enter a number:");
+                string input = Console.ReadLine();
+
+                try
                 {
-                    Console.WriteLine("Please enter a positive integer.");
-                    return;
+                    int n = int.Parse(input);
+
+                    if (n <= 0)
+                    {
+                        Console.WriteLine("Please enter a positive integer.");
+                        continue;
+                    }
+
+                    for (int i = 0; i < n; i++)
+                    {
+                        Console.WriteLine("Hello World");
+                    }
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid integer.");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Number is too large. Please enter a smaller integer.");
                 }
 
-                for (int i = 0; i < n; i++)
-                {
-                    Console.WriteLine("Hello World");
-                }
+                Console.WriteLine("Press any key to try again...");
+                Console.ReadKey();
             }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter a valid integer.");
-            }
-
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
         }
     }
 }
