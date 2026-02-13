@@ -7,17 +7,17 @@ namespace Agent1
         static void Main(string[] args)
         {
             // Main program flow
-            Console.WriteLine("Welcome to the Agent1 Program Flow Control");
-
+            Console.WriteLine("Welcome to the Agent1 Program Flow");
+            
             // Input reading phase
-            Console.WriteLine("Enter a number:");
+            Console.WriteLine("Please enter the number of times 'Hello World' should be printed:");
+            Console.Write("Number of iterations: ");
             string input = Console.ReadLine();
 
-            
             try
             {
                 int n = int.Parse(input);
-
+                
                 if (n <= 0)
                 {
                     Console.WriteLine("Please enter a positive integer.");
@@ -37,7 +37,7 @@ namespace Agent1
                     counter++;
 
                     // Boundary checking for loop limit
-                    if (counter > 100000)
+                    if (counter > 1000000)
                     {
                         Console.WriteLine("Maximum iteration limit exceeded.");
                         break;
