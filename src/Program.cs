@@ -24,12 +24,13 @@ namespace Agent1
                     if (n == 0)
                     {
                         Console.WriteLine("Zero input detected. No output will be produced.");
+                        return;
                     }
                     else
                     {
                         Console.WriteLine("Negative input detected. Please enter a positive integer.");
+                        return;
                     }
-                    return;
                 }
 
                 // Counter variable to track iterations
