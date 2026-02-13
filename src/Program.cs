@@ -21,10 +21,25 @@ namespace Agent1
                         continue;
                     }
 
-                    for (int i = 0; i < n; i++)
+                    // Counter variable to track iterations
+                    int counter = 0;
+                    
+                    // Loop condition based on user input
+                    while (counter < n)
                     {
+                        // Incremental control mechanism
+                        counter++;
+                        
+                        // Boundary checking for loop limits
+                        if (counter > 10000)
+                        {
+                            Console.WriteLine("Maximum iteration limit exceeded.");
+                            break;
+                        }
+                        
                         Console.WriteLine("Hello World");
                     }
+                    
                     break;
                 }
                 catch (FormatException)
