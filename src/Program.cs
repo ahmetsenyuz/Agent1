@@ -8,9 +8,15 @@ namespace Agent1
         {
             Console.WriteLine("Enter a number:");
             string input = Console.ReadLine();
-            
+
             if (int.TryParse(input, out int n))
             {
+                if (n <= 0)
+                {
+                    Console.WriteLine("Please enter a positive integer.");
+                    return;
+                }
+
                 for (int i = 0; i < n; i++)
                 {
                     Console.WriteLine("Hello World");
@@ -20,7 +26,7 @@ namespace Agent1
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.");
             }
-            
+
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
