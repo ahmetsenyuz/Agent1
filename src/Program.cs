@@ -11,7 +11,7 @@ namespace Agent1
 
             // Input reading phase
             Console.WriteLine("Please enter the number of times 'Hello World' should be printed:");
-            Console.Write("Number of iterations: ");
+            Console.WriteLine("Number of iterations: ");
             string input = Console.ReadLine();
 
             try
@@ -21,7 +21,14 @@ namespace Agent1
                 // Validation phase
                 if (n <= 0)
                 {
-                    Console.WriteLine("Please enter a positive integer.");
+                    if (n == 0)
+                    {
+                        Console.WriteLine("Zero input detected. No output will be produced.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Negative input detected. Please enter a positive integer.");
+                    }
                     return;
                 }
 
