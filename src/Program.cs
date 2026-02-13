@@ -2,8 +2,16 @@ using System;
 
 namespace Agent1
 {
+    /// <summary>
+    /// Main program class for the Agent1 application.
+    /// This console application prints "Hello World" n times based on user input.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Main entry point of the application.
+        /// </summary>
+        /// <param name="args">Command line arguments (not used in this application)</param>
         static void Main(string[] args)
         {
             // Main program flow
