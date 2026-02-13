@@ -8,7 +8,7 @@ namespace Agent1
         {
             // Main program flow
             Console.WriteLine("Welcome to the Agent1 Program Flow");
-            
+
             // Input reading phase
             Console.WriteLine("Please enter the number of times 'Hello World' should be printed:");
             Console.Write("Number of iterations: ");
@@ -17,15 +17,13 @@ namespace Agent1
             try
             {
                 int n = int.Parse(input);
-                
+
+                // Validation phase
                 if (n <= 0)
                 {
                     Console.WriteLine("Please enter a positive integer.");
                     return;
                 }
-
-                // Validation phase
-                Console.WriteLine($"Validating input: {n}");
 
                 // Counter variable to track iterations
                 int counter = 0;
